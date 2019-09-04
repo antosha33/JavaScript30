@@ -45,12 +45,12 @@ body {
 .hand {
   width: 50%;
   height: 6px;
-  background: black;
+  background: magenta;
   position: absolute;
   top: 50%;
   transform-origin: 100%;
   transform: rotate(90deg);
-  transition: all 0.1s;
+  transition: all 0.2s;
   transition-timing-function: cubic-bezier(0.52, 1.13, 0.88, 1.31);
 
 }
