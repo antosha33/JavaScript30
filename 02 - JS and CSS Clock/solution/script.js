@@ -19,16 +19,4 @@ const setTime = () => {
   seconds+=1;
 }
 
-const setMinuteHand = () => {
-  const minutedegrees = minutes/ 60* 360+90;
-  arrowMinute.style.transform = `rotate(${minutedegrees}deg)`;
-  if(minutes % 60 === 0)setHourHand();
-  minutes+=1
-}
-
-const setHourHand = () => {
-  const hoursdegrees = hours/ 12* 360+90;
-  hourHand.style.transform = `rotate(${hoursdegrees}deg)`;
-  hours+=1;
-}
 setInterval(setTime, 1000);
