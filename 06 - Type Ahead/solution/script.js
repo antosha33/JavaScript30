@@ -13,7 +13,8 @@ const cities = [];
 function findMatches(wordToMatch, cities){
   return cities.filter((city) => {
     const regex = new RegExp(wordToMatch, 'gi');
-    return city.city.match(regex) || city.state.match(regex);
+    const res = city.city.match(regex) || city.state.match(regex);
+    return res;
   })
 }
 const search = document.querySelector('input');
@@ -31,5 +32,8 @@ const searchHandler = (e) => {
   list.innerHTML = res.join('');
 }
 
-search.addEventListener('keydown', searchHandler);
+
+search.addEventListener('change', searchHandler);
+search.addEventListener('keyup', searchHandler);
+
 
